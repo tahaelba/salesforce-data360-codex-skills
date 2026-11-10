@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 SFTP Ingestion"
+  short_description: "Build and verify SFTP-backed Data Streams"
+  default_prompt: "Use $data360-sftp-ingestion to plan and validate this SFTP-backed Data 360 source."
+
+policy:
+  allow_implicit_invocation: true

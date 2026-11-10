@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Refresh Orchestration"
+  short_description: "Run dependency-ordered Data 360 refreshes"
+  default_prompt: "Use $data360-refresh-orchestration to plan and monitor this post-change Data 360 refresh pipeline."
+
+policy:
+  allow_implicit_invocation: true

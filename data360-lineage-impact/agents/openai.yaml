@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Lineage and Impact"
+  short_description: "Trace fields and assess downstream changes"
+  default_prompt: "Use $data360-lineage-impact to trace this field and identify affected Data 360 consumers."
+
+policy:
+  allow_implicit_invocation: true

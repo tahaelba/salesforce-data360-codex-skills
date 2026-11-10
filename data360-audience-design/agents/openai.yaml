@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Audience Design"
+  short_description: "Design identity, CIs, segments, activations"
+  default_prompt: "Use $data360-audience-design to design and validate this Data 360 audience workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Audience QA"
+  short_description: "Explain segment members and verify exports"
+  default_prompt: "Use $data360-audience-qa to compare expected segment members and activation output with the live results."
+
+policy:
+  allow_implicit_invocation: true

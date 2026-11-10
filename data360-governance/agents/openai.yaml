@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Governance"
+  short_description: "Guard names and safe Data 360 changes"
+  default_prompt: "Use $data360-governance to validate this Data 360 change before implementation."
+
+policy:
+  allow_implicit_invocation: true

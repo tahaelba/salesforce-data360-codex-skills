@@ -34,6 +34,9 @@ They are not static tutorials. They are working instructions, references, and de
 | [`data360-model-deployment`](data360-model-deployment/)           | Formula fields, DLO→DMO mappings, custom model fields, relationships, Party Identification, and batch transforms    |
 | [`data360-audience-design`](data360-audience-design/)             | Identity resolution, Unified Individual design, Calculated Insights, segments, and activation payloads              |
 | [`data360-refresh-orchestration`](data360-refresh-orchestration/) | Dependency-ordered post-change refreshes with polling, freshness checks, timeouts, and failure boundaries           |
+| [`data360-data-quality`](data360-data-quality/)                   | Problem records, contract checks, freshness, reconciliation, and relationship integrity                             |
+| [`data360-lineage-impact`](data360-lineage-impact/)               | Field-level lineage, downstream change impact, and targeted test and refresh scope                                  |
+| [`data360-audience-qa`](data360-audience-qa/)                     | Expected versus actual segment members, exclusion reasons, and activation output checks                             |
 
 ## How the skills work together
 
@@ -79,6 +82,10 @@ Data Streams
 ```
 
 Within one stage, independent jobs can start together. The next stage remains blocked until every upstream job succeeds. If a job is already pending, the runner joins and monitors it instead of submitting a duplicate.
+
+### 4. Validate the data and the audience
+
+Data quality checks inspect rejected rows, keys, freshness, values, counts, and relationships. Lineage traces a changed field through its consumers and narrows the necessary tests. Audience QA compares actual members and activation rows against approved test cases, including inclusion and exclusion reasons.
 
 ## Refresh timeouts
 
@@ -166,6 +173,14 @@ Use $data360-governance to review this proposed Data 360 change for naming,
 key stability, drift, destructive behavior, and missing verification steps.
 ```
 
+### Diagnose a missing audience member
+
+```text
+Use $data360-audience-qa to explain why this synthetic test client is absent.
+Use $data360-lineage-impact to trace its missing field to the source, and
+$data360-data-quality to check rejects and relationship integrity.
+```
+
 ## Refresh runner
 
 The orchestration skill includes a deterministic Node.js runner:
@@ -245,6 +260,18 @@ The skills do not contain customer names, credentials, infrastructure addresses,
 │   ├── agents/openai.yaml
 │   ├── references/
 │   └── scripts/
+├── data360-data-quality/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/
+├── data360-lineage-impact/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/
+├── data360-audience-qa/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/
 ├── LICENSE
 └── README.md
 ```

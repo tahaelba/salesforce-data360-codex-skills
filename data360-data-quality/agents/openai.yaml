@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data 360 Data Quality"
+  short_description: "Measure ingestion and model data quality"
+  default_prompt: "Use $data360-data-quality to audit this Data 360 stream and its downstream model with evidence."
+
+policy:
+  allow_implicit_invocation: true
