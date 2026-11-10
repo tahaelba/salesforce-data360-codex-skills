@@ -13,9 +13,10 @@ Apply the governing project convention before proposing or mutating a Data 360 a
 1. Locate the active repository and inspect its naming convention, current source-to-target mapping, machine-readable contracts, and deployment manifests. Do not rely on an old planning document when a newer approved artifact exists.
 2. Run the project's naming validator before every mutation. Prefer a guarded project command over a lower-level command when one exists.
 3. Retrieve or query the live org before creating anything. Treat repository configuration as desired state and the live org as observed state; report drift instead of silently overwriting it.
-4. Require explicit authorization before deleting, replacing, or deactivating assets. An instruction to deploy does not authorize cleanup of unrelated or incompatible live definitions.
-5. Verify the final runtime state. A successful HTTP response, metadata deployment, or accepted asynchronous job is not proof that a Data Stream, DLO, mapping, relationship, transform, CI, segment, or activation is usable.
-6. After an authorized live mutation, invoke the project's refresh post-hook for affected dependencies. Use `$data360-refresh-orchestration` when installed; do not broaden the refresh scope beyond the assets changed or dependent on them.
+4. Use a connected Data 360 MCP when it supports the task; otherwise use the supported Data 360 or Connect API through an authenticated client or Salesforce CLI. Apply the same preflight and verification in either mode.
+5. Require explicit authorization before deleting, replacing, or deactivating assets. An instruction to deploy does not authorize cleanup of unrelated or incompatible live definitions.
+6. Verify the final runtime state. A successful HTTP response, metadata deployment, or accepted asynchronous job is not proof that a Data Stream, DLO, mapping, relationship, transform, CI, segment, or activation is usable.
+7. After an authorized live mutation, invoke the project's refresh post-hook for affected dependencies. Use `$data360-refresh-orchestration` when installed; do not broaden the refresh scope beyond the assets changed or dependent on them.
 
 ## Sources of truth
 

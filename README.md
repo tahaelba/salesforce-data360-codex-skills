@@ -39,7 +39,9 @@ These skills supply the operating judgment around those actions: which assets de
 | Typical question | “Which API tool runs this segment?” | “Should this segment run now, and what must finish first?” |
 | Result           | A tool response or job result       | A plan, safe execution path, and verified outcome          |
 
-They work together: the skills can guide Codex in using the MCP when it is connected. They can also guide work through Salesforce CLI, supported APIs, and project scripts. Installing skills alone does not connect to an org or grant permissions.
+**MCP is optional.** When the Data 360 MCP is connected, the skills can guide Codex through its tools. When it is not configured, the same skills can operate through supported Salesforce Data 360 and Connect REST APIs, the Salesforce CLI, and project scripts. The planning, dependency checks, and runtime verification remain the same in either mode.
+
+API operation requires an authenticated org, appropriate permissions, and the correct API endpoint and version. Installing the skills alone does not provide connectivity or grant access.
 
 ## What this project does
 
