@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/data360-architect-logo.png" alt="An architect drawing a network of data relationships on a blueprint" width="220" />
+
 # Salesforce Data 360 Skills for Codex
 
 ### From source files to activated audiences—safely, repeatably, and with evidence.
@@ -257,6 +259,7 @@ The skills do not contain customer names, credentials, infrastructure addresses,
 
 ```text
 .
+├── assets/data360-architect-logo.png
 ├── data360-governance/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
