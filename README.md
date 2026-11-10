@@ -11,7 +11,7 @@
 
 **A modular set of agent skills for designing, deploying, validating, and operating Salesforce Data 360 implementations.**
 
-[What it does](#what-this-project-does) · [Install](#installation) · [How it works](#how-the-skills-work-together) · [Examples](#example-prompts) · [Safety](#safety-by-design)
+[MCP vs. skills](#the-levers-and-the-brain) · [What it does](#what-this-project-does) · [Install](#installation) · [How it works](#how-the-skills-work-together) · [Examples](#example-prompts) · [Safety](#safety-by-design)
 
 </div>
 
@@ -24,6 +24,22 @@ Data 360 delivery crosses several layers: physical source contracts, SFTP public
 This project gives Codex reusable operational knowledge for that lifecycle. The skills help an agent reason about dependencies, inspect live state, make idempotent changes, and verify that asynchronous work actually completed.
 
 They are not static tutorials. They are working instructions, references, and deterministic helpers that Codex loads when a matching Data 360 task appears.
+
+## The levers and the brain
+
+> **Data 360 MCP provides the levers. This toolkit provides the brain.**
+
+Salesforce's [Data 360 MCP server](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/data360-mcp.html) gives an agent tools to discover and execute Data 360 Connect API operations: query data, create or update assets, run jobs, and retrieve results. It supplies access to the platform.
+
+These skills supply the operating judgment around those actions: which assets depend on a change, what to inspect before execution, which keys and contracts must remain stable, how to sequence refreshes, when to stop, and what evidence confirms success.
+
+|                  | Data 360 MCP                        | This skill toolkit                                         |
+| ---------------- | ----------------------------------- | ---------------------------------------------------------- |
+| Primary role     | Exposes platform operations         | Guides decisions and workflow                              |
+| Typical question | “Which API tool runs this segment?” | “Should this segment run now, and what must finish first?” |
+| Result           | A tool response or job result       | A plan, safe execution path, and verified outcome          |
+
+They work together: the skills can guide Codex in using the MCP when it is connected. They can also guide work through Salesforce CLI, supported APIs, and project scripts. Installing skills alone does not connect to an org or grant permissions.
 
 ## What this project does
 
