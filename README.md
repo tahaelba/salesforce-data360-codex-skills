@@ -321,6 +321,8 @@ This project is not affiliated with, maintained by, sponsored by, or endorsed by
 
 SPDX-License-Identifier: `Apache-2.0`
 
+Copyright 2026 Taha ElBarbouchi.
+
 Licensed under the [Apache License 2.0](LICENSE). You may use, modify, and distribute this project subject to the license terms and retained [notices](NOTICE).
 
 ---
