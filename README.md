@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/data360-architect-logo.png" alt="An architect drawing an antique data model on a blue blueprint" width="220" />
+<img src="assets/data360-architect-tea-logo.png" alt="A brown architect drawing an antique data model beside a Moroccan teapot and a glass of tea" width="220" />
 
 # Salesforce Data 360 Skills for Codex
 
@@ -259,7 +259,7 @@ The skills do not contain customer names, credentials, infrastructure addresses,
 
 ```text
 .
-├── assets/data360-architect-logo.png
+├── assets/data360-architect-tea-logo.png
 ├── data360-governance/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
