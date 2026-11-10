@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/data360-architect-logo.png" alt="An architect drawing a network of data relationships on a blueprint" width="220" />
+<img src="assets/data360-architect-logo.png" alt="An architect drawing an antique data model on a blue blueprint" width="220" />
 
 # Salesforce Data 360 Skills for Codex
 
