@@ -273,6 +273,7 @@ The skills do not contain customer names, credentials, infrastructure addresses,
 │   ├── agents/openai.yaml
 │   └── references/
 ├── LICENSE
+├── NOTICE
 └── README.md
 ```
 
@@ -297,7 +298,9 @@ This project is not affiliated with, maintained by, sponsored by, or endorsed by
 
 ## License
 
-Licensed under the [Apache License 2.0](LICENSE). You may use, modify, and distribute this project subject to the license terms and retained notices.
+SPDX-License-Identifier: `Apache-2.0`
+
+Licensed under the [Apache License 2.0](LICENSE). You may use, modify, and distribute this project subject to the license terms and retained [notices](NOTICE).
 
 ---
 

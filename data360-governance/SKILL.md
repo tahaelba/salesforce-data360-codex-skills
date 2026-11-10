@@ -1,5 +1,6 @@
 ---
 name: data360-governance
+license: Apache-2.0
 description: Enforce Salesforce Data 360 naming, source-of-truth, preflight, key-stability, and safe-change rules. Use before creating or changing Data Streams, mappings, model metadata, transforms, identity rules, calculated insights, segments, or activations.
 ---
 

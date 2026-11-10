@@ -1,5 +1,6 @@
 ---
 name: data360-audience-qa
+license: Apache-2.0
 description: Validate Salesforce Data 360 segment membership and activation output against an approved audience contract. Use for inclusion and exclusion explanations, CI and identity joins, one-to-many row counts, payload fields, contact keys, suppression, and test handoff.
 ---
 

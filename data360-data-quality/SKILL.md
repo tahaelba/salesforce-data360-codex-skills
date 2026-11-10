@@ -1,5 +1,6 @@
 ---
 name: data360-data-quality
+license: Apache-2.0
 description: Assess Salesforce Data 360 ingestion and modeled data quality. Use for problem records, schema drift, duplicate or null keys, freshness, value rules, relationship integrity, and source-to-DMO reconciliation; report evidence before proposing remediation.
 ---
 

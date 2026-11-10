@@ -1,5 +1,6 @@
 ---
 name: data360-sftp-ingestion
+license: Apache-2.0
 description: Design, generate, publish, create, and verify Salesforce Data 360 SFTP file sources, Data Streams, DSOs, and DLOs. Use for CSV or Parquet contracts, schema discovery, stream formulas, seed data, refresh monitoring, or SFTP ingestion troubleshooting.
 ---
 

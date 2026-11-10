@@ -1,5 +1,6 @@
 ---
 name: data360-refresh-orchestration
+license: Apache-2.0
 description: Run and verify Salesforce Data 360 post-change refresh pipelines in dependency order. Use after authorized source publication or live model, identity, Calculated Insight, segment, or activation changes when jobs must be triggered, joined, polled, timed out, and reported safely.
 ---
 

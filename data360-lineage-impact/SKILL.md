@@ -1,5 +1,6 @@
 ---
 name: data360-lineage-impact
+license: Apache-2.0
 description: Trace Salesforce Data 360 fields and keys from source contract through DLO, DMO, transforms, identity resolution, Calculated Insights, segments, and activations. Use for change impact, mapping documentation, downstream test scope, or safe retirement planning.
 ---
 

@@ -1,5 +1,6 @@
 ---
 name: data360-model-deployment
+license: Apache-2.0
 description: Plan, deploy, and verify Salesforce Data 360 formulas, DLO-to-DMO mappings, DMO relationships, custom model fields, and batch transforms. Use for API-driven model changes, identity carriers, mapping drift, or relationship troubleshooting.
 ---
 

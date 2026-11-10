@@ -1,5 +1,6 @@
 ---
 name: data360-audience-design
+license: Apache-2.0
 description: Design and validate Salesforce Data 360 identity resolution, Calculated Insights, segments, and activations. Use for audience grain, Prospect versus Unified Individual selection, CI SQL, segment fields, activation payloads, or UI handoff instructions.
 ---
 
