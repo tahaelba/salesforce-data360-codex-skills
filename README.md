@@ -50,7 +50,6 @@ API operation requires an authenticated org, appropriate permissions, and the co
 | Icon | Skill | Responsibility |
 | :--: | --- | --- |
 | <img src="data360-governance/assets/logo.png" alt="Governance icon" width="64" /> | [`data360-governance`](data360-governance/) | Naming, source-of-truth rules, preflight checks, stable keys, drift detection, and safe changes |
-| <img src="data360-model-deployment/assets/logo.png" alt="Model deployment icon" width="64" /> | [`data360-model-deployment`](data360-model-deployment/) | Formula fields, DLO→DMO mappings, custom model fields, relationships, Party Identification, and batch transforms |
 | <img src="data360-audience-design/assets/logo.png" alt="Audience design icon" width="64" /> | [`data360-audience-design`](data360-audience-design/) | Identity resolution, Unified Individual design, Calculated Insights, segments, and activation payloads |
 | <img src="data360-refresh-orchestration/assets/logo.png" alt="Refresh orchestration icon" width="64" /> | [`data360-refresh-orchestration`](data360-refresh-orchestration/) | Dependency-ordered post-change refreshes with polling, freshness checks, timeouts, and failure boundaries |
 | <img src="data360-data-quality/assets/logo.png" alt="Data quality icon" width="64" /> | [`data360-data-quality`](data360-data-quality/) | Problem records, contract checks, freshness, reconciliation, and relationship integrity |
@@ -85,7 +84,7 @@ Before a mutation, Codex identifies the project's naming convention, contracts, 
 
 ### 2. A domain skill performs the work
 
-The model or audience skill provides the task-specific workflow. Operations are designed to be idempotent: exact live matches are skipped, incompatible live definitions stop preflight, and destructive replacement is never implicit.
+The relevant domain skill provides the task-specific workflow. Operations are designed to be idempotent: exact live matches are skipped, incompatible live definitions stop preflight, and destructive replacement is never implicit.
 
 ### 3. Refresh orchestration runs as the post-hook
 
@@ -156,13 +155,6 @@ Copy-Item -Path '.\data360-*' -Destination $skillTarget -Recurse -Force
 Restart or reload Codex after installation. The skills support automatic discovery and can also be invoked explicitly with `$skill-name`.
 
 ## Example prompts
-
-### Plan a model change
-
-```text
-Use $data360-model-deployment to compare this DLO-to-DMO mapping manifest
-with the live org and produce a field-level deployment plan.
-```
 
 ### Design an audience
 
@@ -253,10 +245,6 @@ The skills do not contain customer names, credentials, infrastructure addresses,
 .
 ├── assets/data360-architect-tea-logo.png
 ├── data360-governance/
-│   ├── SKILL.md
-│   ├── agents/openai.yaml
-│   └── references/
-├── data360-model-deployment/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── references/

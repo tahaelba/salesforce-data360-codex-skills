@@ -1,7 +1,0 @@
-interface:
-  display_name: "Data 360 Model Deployment"
-  short_description: "Deploy mappings, formulas, and relationships"
-  default_prompt: "Use $data360-model-deployment to plan, deploy, and verify this Data 360 model change."
-
-policy:
-  allow_implicit_invocation: true
