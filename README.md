@@ -47,16 +47,16 @@ API operation requires an authenticated org, appropriate permissions, and the co
 
 ## What this project does
 
-| Skill                                                             | Responsibility                                                                                                      |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [`data360-governance`](data360-governance/)                       | Naming, source-of-truth rules, preflight checks, stable keys, drift detection, and safe changes                     |
-| [`data360-sftp-ingestion`](data360-sftp-ingestion/)               | CSV/Parquet contracts, atomic SFTP publication, schema discovery, Data Streams, DSOs, DLOs, and ingestion diagnosis |
-| [`data360-model-deployment`](data360-model-deployment/)           | Formula fields, DLO→DMO mappings, custom model fields, relationships, Party Identification, and batch transforms    |
-| [`data360-audience-design`](data360-audience-design/)             | Identity resolution, Unified Individual design, Calculated Insights, segments, and activation payloads              |
-| [`data360-refresh-orchestration`](data360-refresh-orchestration/) | Dependency-ordered post-change refreshes with polling, freshness checks, timeouts, and failure boundaries           |
-| [`data360-data-quality`](data360-data-quality/)                   | Problem records, contract checks, freshness, reconciliation, and relationship integrity                             |
-| [`data360-lineage-impact`](data360-lineage-impact/)               | Field-level lineage, downstream change impact, and targeted test and refresh scope                                  |
-| [`data360-audience-qa`](data360-audience-qa/)                     | Expected versus actual segment members, exclusion reasons, and activation output checks                             |
+| Icon | Skill | Responsibility |
+| :--: | --- | --- |
+| <img src="data360-governance/assets/logo.png" alt="Governance icon" width="64" /> | [`data360-governance`](data360-governance/) | Naming, source-of-truth rules, preflight checks, stable keys, drift detection, and safe changes |
+| <img src="data360-sftp-ingestion/assets/logo.png" alt="SFTP ingestion icon" width="64" /> | [`data360-sftp-ingestion`](data360-sftp-ingestion/) | CSV/Parquet contracts, atomic SFTP publication, schema discovery, Data Streams, DSOs, DLOs, and ingestion diagnosis |
+| <img src="data360-model-deployment/assets/logo.png" alt="Model deployment icon" width="64" /> | [`data360-model-deployment`](data360-model-deployment/) | Formula fields, DLO→DMO mappings, custom model fields, relationships, Party Identification, and batch transforms |
+| <img src="data360-audience-design/assets/logo.png" alt="Audience design icon" width="64" /> | [`data360-audience-design`](data360-audience-design/) | Identity resolution, Unified Individual design, Calculated Insights, segments, and activation payloads |
+| <img src="data360-refresh-orchestration/assets/logo.png" alt="Refresh orchestration icon" width="64" /> | [`data360-refresh-orchestration`](data360-refresh-orchestration/) | Dependency-ordered post-change refreshes with polling, freshness checks, timeouts, and failure boundaries |
+| <img src="data360-data-quality/assets/logo.png" alt="Data quality icon" width="64" /> | [`data360-data-quality`](data360-data-quality/) | Problem records, contract checks, freshness, reconciliation, and relationship integrity |
+| <img src="data360-lineage-impact/assets/logo.png" alt="Lineage impact icon" width="64" /> | [`data360-lineage-impact`](data360-lineage-impact/) | Field-level lineage, downstream change impact, and targeted test and refresh scope |
+| <img src="data360-audience-qa/assets/logo.png" alt="Audience QA icon" width="64" /> | [`data360-audience-qa`](data360-audience-qa/) | Expected versus actual segment members, exclusion reasons, and activation output checks |
 
 ## How the skills work together
 
