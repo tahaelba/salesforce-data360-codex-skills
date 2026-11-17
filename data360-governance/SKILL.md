@@ -32,6 +32,7 @@ For the portable project configuration and review checklist, read [references/pr
 - Respect API limits with bounded retries for transient errors only. Do not retry validation failures or error-state definitions as if they were transient.
 - A post-hook must inspect status before triggering work, join an existing pending run instead of duplicating it, enforce stage timeouts, and stop downstream processing after failure or timeout.
 - Preserve user-created assets unless the user identifies them as in scope.
+- Before mutating QA records, capture their current full rows and downstream baseline, and prove a supported restoration path for the affected stream. A seed file alone is not evidence of the current state.
 - Treat source primary keys as immutable operational contracts. Do not change a key merely to match an activation alias; an upsert does not remove records omitted from a later file, and a changed key creates a new record.
 - Do not add physical or model fields solely to reproduce an output column name when an activation alias can express the same business value.
 - Call out UI-only or unsupported steps clearly and hand them to the user with exact verification criteria.

@@ -28,6 +28,8 @@ Timeouts are operational ceilings, not expected durations. Tune them from observ
 
 The default polling interval is 15 seconds. Use a longer interval for large or rate-limited environments. A timeout means the final platform outcome is unknown; inspect the job later instead of automatically retrying it.
 
+If the local monitor times out or loses its connection, first read the live job status, run identifier, and freshness marker. A backend run may have completed after the monitor stopped. Join a still-pending run; if it completed, verify its output before advancing. Trigger a new run only after confirming that no pending or successful run already covers the change.
+
 ## Manifest
 
 The runner resolves `${ENVIRONMENT_VARIABLE}` placeholders at runtime. Keep authentication outside the manifest.
@@ -72,3 +74,5 @@ node scripts/run-refresh-pipeline.mjs run --manifest=config/data360-refresh.json
 Use `--from=<stage>` and `--through=<stage>` to limit an affected chain. A project can wire the run command into its guarded post-mutation command, for example an npm `postsftp:publish` hook. The hook must receive an explicit affected-asset manifest; do not refresh every asset by default.
 
 For stages that require a UI action or separate approval, omit the mutating job from the manifest, stop the pipeline, and hand off the exact next stage to the user.
+
+For a reversible QA test, run the affected chain once after the mutation and again after source restoration. Compare the final DLO, DMO, identity or CI results, and exact segment membership with the captured baseline. If a stage was not rerun, say that downstream restoration is unverified. Do not include external activation delivery in a reversible test unless the destination has an approved reset procedure.

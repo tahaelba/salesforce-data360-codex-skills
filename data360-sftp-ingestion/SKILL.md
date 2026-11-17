@@ -20,7 +20,7 @@ Use a contract-first workflow. A sample file is a schema-discovery artifact, not
 8. Run the refresh post-hook after publication: Data Streams first, then only the transforms, identity rules, Calculated Insights, segments, and activations that depend on the changed data. Use `$data360-refresh-orchestration` when installed.
 9. Keep scheduling disabled until keys, categories, refresh semantics, and a controlled ingestion run have been reviewed.
 
-For the portable file, publication, and refresh workflow, read [references/file-ingestion-workflow.md](references/file-ingestion-workflow.md).
+For the portable file, publication, and refresh workflow, read [references/file-ingestion-workflow.md](references/file-ingestion-workflow.md). For a test that changes existing records and must return to its prior state, read [references/restoration-workflow.md](references/restoration-workflow.md) before publishing the test file.
 
 ## Adding source fields
 

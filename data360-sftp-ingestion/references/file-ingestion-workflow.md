@@ -41,6 +41,10 @@ Poll without launching duplicate jobs while status is `PENDING`. Inspect, when a
 
 Allow bounded polling because refreshes can remain pending for several minutes. Stop on terminal failure or timeout and preserve evidence for diagnosis.
 
+If a local monitor times out or loses its connection, the platform outcome is unknown. Read the stream status and DLO again before retrying; the original run may have finished successfully after the monitor stopped.
+
 ## Downstream order
 
 After successful ingestion, run only the affected downstream dependencies: mappings, dependent transforms, identity resolution when identity-bearing data changed, Calculated Insights, segments, and activations. Do not refresh every dependency indiscriminately.
+
+For reversible QA, a successful ingest is only one checkpoint. Use [restoration-workflow.md](restoration-workflow.md) to prove the source, DLO, modeled data, and affected audiences return to their captured state.

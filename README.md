@@ -186,6 +186,14 @@ Use $data360-refresh-orchestration to plan the post-change refresh, join
 pending jobs, and stop before any downstream stage that would use stale data.
 ```
 
+### Test and restore an ingestion change
+
+```text
+Use $data360-sftp-ingestion and $data360-audience-qa to capture the current
+rows and audience, test a file change, restore the source records, then verify
+the DLO, modeled data, CI, and exact segment-member set after refresh.
+```
+
 ### Apply governance explicitly
 
 ```text
@@ -238,6 +246,7 @@ The skills follow several non-negotiable rules:
 - **Stable keys stay stable.** Changing a primary key under upsert semantics creates a new record; it is not a rename.
 - **No duplicate asynchronous runs.** Existing pending jobs are joined and monitored.
 - **Accepted is not completed.** HTTP success and `ACTIVE` metadata do not prove a refresh succeeded.
+- **Restoration is measured.** A successful replay can leave a newer Profile row in place; compare actual values and exact audience members with a captured baseline.
 - **Freshness matters.** Downstream stages wait for terminal success and a newer timestamp or run marker when available.
 - **Activation is an external effect.** It runs only when delivery is within the authorized scope.
 - **Secrets stay outside Git.** Never commit tokens, private keys, credentials, customer data, host details, or production identifiers.
